@@ -1,0 +1,53 @@
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta name="description" content="forever free filehosting">
+  <meta content="blockbreaker filehost" property="og:title" />
+  <meta content="forever free filehosting" property="og:description" />
+  <meta content="#3AC3F3" data-react-helmet="true" name="theme-color" />
+  
+  <title>blockbreaker filehost - Home</title>
+  <link href="./webassets/bstrap.css" rel="stylesheet">
+  <link href="./webassets/style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column">  
+<header>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">blockbreaker filehost</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    
+  </div>
+</nav>
+</header>
+
+<main role="main" class="flex-shrink-0">
+<div class="container">
+  <h1 class="mt-5">blockbreaker filehost</h1>
+  <p class="lead">forever free filehosting</p>
+  <div class="container" id="uploadbox">
+    <div class="row">
+        <div>
+            <form action="./sendfile" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input bg-dark" id="filei" name="src">
+                  <label class="custom-file-label" for="filei">Choose a file (or drop it)</label>
+                </div>
+              </div>
+			  <button type="submit" id="submit_file" class="btn btn-secondary">Upload</button>
+            </form>
+        </div>
+    </div>
+  </div><br>
+  <i style="font-size: 10px;">Serving <%=fsize%> MB of files.</i><br>
+  <small>Please acknowledge this website is still in development. Stuff like errors, light mode and others will probably not work correctly.</small>
+  <p><small>In case you see a issue, or want to add a feature, <a href="https://forms.gle/VPvHPxbTDmhbsscQA" target="_blank">click here.</a></small></p>
+  <p><small>Multiple files are not in plan for now.</small></p>
+    <div id="status"><div class="spinner"></div><h1 id="h1upload"></h1></div>
+</div>
+</main>
+  <script src="./webassets/script.js"></script>
+</body></html>

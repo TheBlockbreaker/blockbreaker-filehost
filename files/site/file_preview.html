@@ -1,0 +1,42 @@
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  
+  <meta name="description" content="forever free filehosting">
+  <meta content="blockbreaker filehost" property="og:title" />
+  <meta content="forever free filehosting" property="og:description" />
+  <meta content="#3AC3F3" data-react-helmet="true" name="theme-color" />
+  
+  <title>blockbreaker filehost - <%=filename%></title>
+  <link href="/webassets/bstrap.css" rel="stylesheet">
+  <link href="/webassets/style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">  
+<header>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <a class="navbar-brand" href="/">blockbreaker filehost</a>
+</nav>
+</header>
+
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5"><%=filename%></h1>
+        <div class="row mt-4">
+          <div class="col-md-8">
+              <h5>Preview: </h5>
+            <iframe class="preview" src="/file/raw/<%=ogfile%>" frameborder="0" sandbox="allow-same-origin allow-popups"></iframe>
+			<br><small id="finfo"></small>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-4">
+            <br><a href="/download/<%=ogfile%>" class="btn btn-primary btn-lg download-button">Download (<%=size%> MB)</a>
+            <a href="/file/raw/<%=ogfile%>" class="btn btn-secondary btn-lg download-button" target="_blank">Show Raw</a>
+          </div>
+        </div>
+      </div>
+</main>
+  <script>(function(){var fid='<%=ogfile%>'.match(/^(.+)_([0-9a-z]+)\.(.+)$/);if (fid[2]=="official"){document.getElementById("finfo").innerText=`This is a official file that was published by the developer of this website.`;}else{document.getElementById("finfo").innerText=`ID: ${fid[2]}\nDate published: ${new Date((parseInt(fid[2]))).toLocaleString('en-US', {month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'numeric',second:'numeric',timeZoneName:'short'})}`;}})();</script>
+</body></html>
