@@ -1,0 +1,30 @@
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>blockbreaker filehost - Upload Status</title>
+  <link href="/webassets/bstrap.css" rel="stylesheet">
+  <link href="/webassets/style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">  
+<header>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <a class="navbar-brand" href="/">blockbreaker filehost</a>
+</nav>
+</header>
+
+<main role="main" class="flex-shrink-0">
+<div class="container">
+  <h1 class="mt-5">Uploaded.</h1>
+  <p class="lead">Your file (<%= filename %>) was uploaded <a href="/file/<%=ogfile%>">here.</a></p>
+  <p class="mt-1">You will be redirected to your file in 5 seconds.</p>
+</div>
+</main>
+  <script>
+    var redirect=setTimeout(function(){
+      window.location.href="/file/<%=ogfile%>";
+      window.clearTimeout(redirect);
+    }, 5000);
+  </script>
+</body></html>
